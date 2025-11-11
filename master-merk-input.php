@@ -61,7 +61,7 @@ if(isset($_GET['status'])){
 									    <div class="card-body">
 											<div class="mb-3">
 												<label for="nama" class="form-label">Nama Merk Sepatu</label>
-												<input type="text" class="form-control" id="nama" name="merk_sepatu" placeholder="Masukkan Nama Merk Sepatu" required>
+												<input type="text" class="form-control" id="merk_sepatu" name="merk_sepatu" placeholder="Masukkan Nama Merk Sepatu" required>
 											</div>
                                         </div>
 									    <div class="card-footer">

@@ -94,7 +94,7 @@ if(isset($_GET['search'])){
 													<thead>
 														<tr>
 															<th>No</th>
-															<th>Kde</th>
+															<th>Kode</th>
 															<th>Nama</th>
 															<th>Jenis</th>
 															<th>Merk</th>

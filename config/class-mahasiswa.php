@@ -148,12 +148,12 @@ class Sepatu extends Database {
         $stmt->execute();
         $result = $stmt->get_result();
         // Menyiapkan array kosong untuk menyimpan data mahasiswa
-        $mahasiswa = [];
+        $sepatu= [];
         if($result->num_rows > 0){
             // Mengambil setiap baris data dan memasukkannya ke dalam array
             while($row = $result->fetch_assoc()) {
                 // Menyimpan data mahasiswa dalam array
-                $mahasiswa[] = [
+                $sepatu[] = [
                     'id_sepatu' => $row['id_sepatu'],
                     'kode_sepatu' => $row['kode_sepatu'],
                     'nama_sepatu' => $row['nama_sepatu'],

@@ -65,16 +65,15 @@ if(isset($_GET['status'])){
 											</button>
 										</div>
 									</div>
-                                    <form action="proses/proses-edit.php" method="POST">
-									    <div class="card-body">
-                                            <input type="hidden" name="id" value="<?php echo $dataSepatu['id']; ?>">
                                             <div class="mb-3">
-                                                <label for="kode" class="form-label">kode Sepatu</label>
-                                                <input type="number" class="form-control" id="kode" name="kode" placeholder="Masukkan Kode Sepatu" value="<?php echo $dataSepatu['kode']; ?>" required>
-                                            </div>
+                                    <form action="proses/proses-edit.php" method="POST">
+									    <div class="mb-3">
+                                            <label for="nama" class="form-label">Kode Sepatu</label>
+                                            <input type="number" class="form-control" id="kode_jenis" name="kode_jenis" placeholder="Masukkan Kode Jenis sepatu" required>
+                                        </div>
                                             <div class="mb-3">
                                                 <label for="nama" class="form-label">Nama Sepatu</label>
-                                                <input type="number" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Sepatu" value="<?php echo $dataSepatu['nama']; ?>" required>
+                                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Jenis Sepatu" required>
                                             </div>
                                             <div class="mb-3">
                                                 <label for="jenis" class="form-label">Jenis Sepatu</label>
@@ -82,8 +81,8 @@ if(isset($_GET['status'])){
                                                     <option value="" selected disabled>Pilih Jenis Sepatu</option>
                                                     <?php 
                                                     // Iterasi daftar program studi dan menandai yang sesuai dengan data mahasiswa yang dipilih
-                                                    foreach ($jenisList as $jenis){
-                                                        // Menginisialisasi variabel kosong untuk menandai opsi yang dipilih
+                                                  foreach ($jenisList as $jenis){
+                                                        echo '<option value="'.$jenis['id'].'">'.$jenis['jenis'].'</option>';
                                                         $selectedJenis = "";
                                                         // Mengecek apakah program studi saat ini sesuai dengan data mahasiswa
                                                         if($dataSepatu['jenis'] == $jenis['id']){
@@ -102,8 +101,9 @@ if(isset($_GET['status'])){
                                                     <option value="" selected disabled>Pilih Merk Sepatu</option>
                                                     <?php
                                                     // Iterasi daftar provinsi dan menandai yang sesuai dengan data mahasiswa yang dipilih
-                                                    foreach ($merkiList as $merk){
-                                                        // Menginisialisasi variabel kosong untuk menandai opsi yang dipilih
+                                                    foreach ($merkList as $merk){
+                                                        echo '<option value="'.$merk['id'].'">'.$merk['merk'].'</option>';
+                                                    }
                                                         $selectedMerk = "";
                                                         // Mengecek apakah provinsi saat ini sesuai dengan data mahasiswa
                                                         if($dataSepatu['merk'] == $merk['id']){
@@ -111,8 +111,8 @@ if(isset($_GET['status'])){
                                                             $selectedMerk = "selected";
                                                         }
                                                         // Menampilkan opsi provinsi dengan penanda yang sesuai
-                                                        echo '<option value="'.$merk['id'].'" '.$selectedMerk.'>'.$merk['merk'].'</option>';
-                                                    }
+                                                        echo '<option value="'.$merk['merk'].'" '.$selectedMerk.'>'.$merk['merk'].'</option>';
+                                                    
                                                     ?>
                                                 </select>
                                             </div>

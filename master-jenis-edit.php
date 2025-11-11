@@ -60,7 +60,7 @@ if(isset($_GET['status'])){
 											</button>
 										</div>
 									</div>
-                                    <form action="proses/proses-prodi.php?aksi=updateprodi" method="POST">
+                                    <form action="proses/proses-jenis.php?aksi=updatejenis" method="POST">
 									    <div class="card-body">
                                             <div class="mb-3">
                                                 <label for="nama" class="form-label">Kode Sepatu</label>

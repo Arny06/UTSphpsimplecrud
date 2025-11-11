@@ -42,15 +42,15 @@ CREATE TABLE IF NOT EXISTS `tb_jenis` (
 
 -- Dumping data for table db_simplecrud.tb_prodi: ~9 rows (approximately)
 INSERT INTO `tb_jenis` (`kode_jenis`, `jenis_sepatu`) VALUES
-	('S001', 'Sneakers'),
-	('S002', 'Running Shoes'),
-	('S003', 'Boots'),
-	('S004', 'Casual'),
-	('S005', 'Skateboard'),
-	('S006', 'Training Shoes'),
-	('S007', 'Slip-on'),
-	('S008', 'Work Boots'),
-	('S009', 'Hiking Boots');
+	('001', 'Sneakers'),
+	('002', 'Running Shoes'),
+	('003', 'Boots'),
+	('004', 'Casual'),
+	('005', 'Skateboard'),
+	('006', 'Training Shoes'),
+	('007', 'Slip-on'),
+	('008', 'Work Boots'),
+	('009', 'Hiking Boots');
 
 -- Dumping structure for table db_simplecrud.tb_provinsi
 CREATE TABLE IF NOT EXISTS `tb_merk` (

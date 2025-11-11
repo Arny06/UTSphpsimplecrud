@@ -65,7 +65,7 @@ if(isset($_GET['status'])){
                                             <input type="hidden" name="id" value="<?php echo $dataMerk['id']; ?>">
 											<div class="mb-3">
 												<label for="nama" class="form-label">Nama Merk Sepatu</label>
-												<input type="char" class="form-control" id="nama" name="nama" placeholder="Masukkan Merk Sepatu" value="<?php echo $dataMerk['nama']; ?>" required>
+												<input type="text" class="form-control" id="merk_sepatu" name="merk_sepatu" placeholder="Masukkan Merk Sepatu" value="<?php echo $dataMerk['merk_sepatu']; ?>" required>
 											</div>
                                         </div>
 									    <div class="card-footer">

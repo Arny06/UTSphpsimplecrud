@@ -5,13 +5,13 @@ include_once 'config/class-master.php';
 $master = new MasterData();
 if(isset($_GET['status'])){
 	if($_GET['status'] == 'inputsuccess'){
-		echo "<script>alert('Data prodi berhasil ditambahkan.');</script>";
+		echo "<script>alert('Data jenis sepatu berhasil ditambahkan.');</script>";
 	} else if($_GET['status'] == 'editsuccess'){
-		echo "<script>alert('Data prodi berhasil diubah.');</script>";
+		echo "<script>alert('Data jenis sepatu berhasil diubah.');</script>";
 	} else if($_GET['status'] == 'deletesuccess'){
-		echo "<script>alert('Data prodi berhasil dihapus.');</script>";
+		echo "<script>alert('Data jenis sepatu berhasil dihapus.');</script>";
 	} else if($_GET['status'] == 'deletefailed'){
-		echo "<script>alert('Gagal menghapus data prodi. Silakan coba lagi.');</script>";
+		echo "<script>alert('Gagal menghapus data jenis sepatu. Silakan coba lagi.');</script>";
 	}
 }
 $dataJenis = $master->getJenis();
@@ -80,7 +80,7 @@ $dataJenis = $master->getJenis();
 												<?php
 													if(count($dataJenis) == 0){
 													    echo '<tr class="align-middle">
-															<td colspan="4" class="text-center">Tidak ada data prodi.</td>
+															<td colspan="4" class="text-center">Tidak ada data jenis sepatu.</td>
 														</tr>';
 													} else {
 														foreach ($dataJenis as $index => $jenis){
@@ -90,7 +90,7 @@ $dataJenis = $master->getJenis();
 																<td>'.$jenis['jenis'].'</td>
 																<td class="text-center">
 																	<button type="button" class="btn btn-sm btn-warning me-1" onclick="window.location.href=\'master-jenis-edit.php?id='.$jenis['id'].'\'"><i class="bi bi-pencil-fill"></i> Edit</button>
-																	<button type="button" class="btn btn-sm btn-danger" onclick="if(confirm(\'Yakin ingin menghapus data jenis sepatu ini?\')){window.location.href=\'proses/proses-jenis.php?aksi=deletepjenis&id='.$jenis['id'].'\'}"><i class="bi bi-trash-fill"></i> Hapus</button>
+																	<button type="button" class="btn btn-sm btn-danger" onclick="if(confirm(\'Yakin ingin menghapus data jenis sepatu ini?\')){window.location.href=\'proses/proses-jenis.php?aksi=deletejenis&id='.$jenis['id'].'\'}"><i class="bi bi-trash-fill"></i> Hapus</button>
 																</td>
 															</tr>';
 														}

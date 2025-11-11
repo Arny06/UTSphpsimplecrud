@@ -79,7 +79,7 @@ class MasterData extends Database {
     public function updateJenis($data){
         $kodeJenis = $data['kode'];
         $namaJenis = $data['nama'];
-        $query = "UPDATE tb_jenis SET nama_jenis = ? WHERE kode_jenis = ?";
+        $query = "UPDATE tb_jenis SET jenis_sepatu = ? WHERE kode_jenis = ?";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
@@ -105,13 +105,13 @@ class MasterData extends Database {
 
     // Method untuk input data provinsi
     public function inputMerk($data){
-        $namaMerk = $data['nama'];
+        $merk = $data['merk'];
         $query = "INSERT INTO tb_merk_sepatu (merk_sepatu) VALUES (?)";
         $stmt = $this->conn->prepare($query);
         if(!$stmt){
             return false;
         }
-        $stmt->bind_param("s", $namaMerk);
+        $stmt->bind_param("s", $merk);
         $result = $stmt->execute();
         $stmt->close();
         return $result;

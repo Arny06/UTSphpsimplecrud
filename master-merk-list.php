@@ -5,13 +5,13 @@ include_once 'config/class-master.php';
 $master = new MasterData();
 if(isset($_GET['status'])){
 	if($_GET['status'] == 'inputsuccess'){
-		echo "<script>alert('Data provinsi berhasil ditambahkan.');</script>";
+		echo "<script>alert('Data Merk Sepatu berhasil ditambahkan.');</script>";
 	} else if($_GET['status'] == 'editsuccess'){
-		echo "<script>alert('Data provinsi berhasil diubah.');</script>";
+		echo "<script>alert('Data Merk Sepatu berhasil diubah.');</script>";
 	} else if($_GET['status'] == 'deletesuccess'){
-		echo "<script>alert('Data provinsi berhasil dihapus.');</script>";
+		echo "<script>alert('Data Merk Sepatu berhasil dihapus.');</script>";
 	} else if($_GET['status'] == 'deletefailed'){
-		echo "<script>alert('Gagal menghapus data provinsi. Silakan coba lagi.');</script>";
+		echo "<script>alert('Gagal menghapus data Merk Sepatu. Silakan coba lagi.');</script>";
 	}
 }
 $dataMerk = $master->getMerk();
@@ -87,8 +87,8 @@ $dataMerk = $master->getMerk();
 																<td>'.($index + 1).'</td>
 																<td>'.$merk['merk'].'</td>
 																<td class="text-center">
-																	<button type="button" class="btn btn-sm btn-warning me-1" onclick="window.location.href=\'master-merk-edit.php?id='.$merk['id'].'\'"><i class="bi bi-pencil-fill"></i> Edit</button>
-																	<button type="button" class="btn btn-sm btn-danger" onclick="if(confirm(\'Yakin ingin menghapus data Merk Sepatu ini?\')){window.location.href=\'proses/proses-merk.php?aksi=deletemerk&id='.$merk['id'].'\'}"><i class="bi bi-trash-fill"></i> Hapus</button>
+																	<button type="button" class="btn btn-sm btn-warning me-1" onclick="window.location.href=\'master-merk-edit.php?id='.$merk['merk'].'\'"><i class="bi bi-pencil-fill"></i> Edit</button>
+																	<button type="button" class="btn btn-sm btn-danger" onclick="if(confirm(\'Yakin ingin menghapus data Merk Sepatu ini?\')){window.location.href=\'proses/proses-merk.php?aksi=deletemerk&id='.$merk['merk'].'\'}"><i class="bi bi-trash-fill"></i> Hapus</button>
 																</td>
 															</tr>';
 														}
